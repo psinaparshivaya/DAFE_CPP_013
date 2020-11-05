@@ -50,6 +50,7 @@ Token Token_stream::get()
     case 'q':
     case '^':
     case '!':
+    case 'h':
         return Token{ ch };
     case 'L':
         return Token{ let };

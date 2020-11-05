@@ -25,6 +25,11 @@ void calculate()
             t = ts.get();
         if (t.kind == quit)
             return;
+        if (t.kind == help)
+        {
+            cout << help_message << endl;
+            continue;
+        }
         ts.putback(t);
         cout << result << statement() << endl;
     }

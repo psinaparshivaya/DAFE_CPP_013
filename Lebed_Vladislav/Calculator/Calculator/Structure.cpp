@@ -4,6 +4,7 @@
 #include "Token.h"
 #include "Variable.h"
 
+
 int fctr(int x) // Factorial
 {
     if (x < 0)
