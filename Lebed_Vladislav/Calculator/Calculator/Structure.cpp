@@ -5,18 +5,22 @@
 #include "Variable.h"
 
 
-int fctr(int x) // Factorial
+double fctr(double x) // Factorial
 {
     if (x < 0)
     {
         error("Factorial(value), value < 0 - Wrong operation");
     }
-    int F = 1;
-    for (int i = 1; i <= x; ++i)
+    if (x != round(x))
     {
-        F *= i;
+        error("Factorial(value), value - Natural number");
     }
-    return F;
+    if (x == 0)
+        return 1;
+    else
+    {
+        return x * fctr(x - 1);
+    }
 }
 
 double declaration()
