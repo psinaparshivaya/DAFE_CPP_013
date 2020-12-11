@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class vector11 
+{ 
+	int sz;
+	double* elem;
+	public:
+		vector11(int s)
+		:sz{s}, elem{new double[s]} 
+		{ 
+			for(int i=0;i<s;++i)
+			elem[i]=0.0;
+		}
+	int size() const {return sz;}
+	double get(int n) const {return elem[n];}
+	void set(int n, double v) {elem[n]=v;}
+	~vector11()
+	{ delete[] elem; }
+};
